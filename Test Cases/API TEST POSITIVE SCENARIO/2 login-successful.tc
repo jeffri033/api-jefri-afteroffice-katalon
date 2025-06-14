@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>2-create-new-user</name>
+   <name>2 login-successful</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>904f0910-7256-407a-aee3-7fc95665284b</testCaseGuid>
+   <testCaseGuid>f42d2906-2cef-431b-be47-0b10f11c70a6</testCaseGuid>
 </TestCaseEntity>

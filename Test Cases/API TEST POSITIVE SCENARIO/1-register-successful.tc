@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>1-get-users</name>
+   <name>1-register-successful</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>1e114724-8749-4291-b943-683de2a054db</testCaseGuid>
+   <testCaseGuid>4670f19f-8422-45f8-8ce2-2948b292da4c</testCaseGuid>
 </TestCaseEntity>

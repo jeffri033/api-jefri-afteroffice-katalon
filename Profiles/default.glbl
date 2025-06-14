@@ -20,6 +20,13 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>7</initValue>
+      <name>idUser</name>
+      <protected>false</protected>
+      <valueType>NUMBER</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'Michael'</initValue>
       <name>firstName</name>
       <protected>false</protected>
@@ -34,22 +41,8 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Jefri'</initValue>
-      <name>userName</name>
-      <protected>false</protected>
-      <valueType>STRING</valueType>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'Quality Assurance'</initValue>
-      <name>job</name>
-      <protected>false</protected>
-      <valueType>STRING</valueType>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>idUser</name>
+      <initValue>'michael.lawson@reqres.in'</initValue>
+      <name>email</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>

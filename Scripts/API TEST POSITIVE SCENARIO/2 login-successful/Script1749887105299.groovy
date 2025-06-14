@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 // get API response
-def response = WS.sendRequest(findTestObject('API Method/1-get-users', [('page') : '2']))
+def response = WS.sendRequest(findTestObject('API Method/2-login-successful', [('baseUrl') : GlobalVariable.baseURL, ('apiKey') : GlobalVariable.apiKey]))
 
 // verify response code
 WS.verifyResponseStatusCode(response, 200)
@@ -27,17 +27,12 @@ WS.verifyResponseStatusCode(response, 200)
 def slurpler = new groovy.json.JsonSlurper()
 def result = slurpler.parseText(response.getResponseBodyContent())
 
-def firstName = result.data[0].first_name
-def lastName = result.data[0].last_name
+// verify user id
+assert result.token != null
+assert result.token instanceof String
 
 
-// verify first name
-assert firstName != null
-assert firstName instanceof String
-assert firstName == GlobalVariable.firstName
 
-// verify last name
-assert lastName != null
-assert lastName instanceof String
-assert lastName == GlobalVariable.lastName
+
+
 

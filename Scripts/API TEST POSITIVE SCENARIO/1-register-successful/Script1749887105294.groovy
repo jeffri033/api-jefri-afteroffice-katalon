@@ -17,24 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 // get API response
-def response = WS.sendRequest(findTestObject('API Method/2-create-new-user', [('apiKey') : GlobalVariable.apiKey, ('userName') : GlobalVariable.userName, ('job') : GlobalVariable.job]))
+def response = WS.sendRequest(findTestObject('API Method/1-register-successful', [('baseUrl') : GlobalVariable.baseURL, ('apiKey') : GlobalVariable.apiKey]))
 
 // verify response code
-WS.verifyResponseStatusCode(response, 201)
+WS.verifyResponseStatusCode(response, 200)
 
 // get response data
-def slurpler = new groovy.json.JsonSlurper()
-def result = slurpler.parseText(response.getResponseBodyContent())
+def slurpler 	= new groovy.json.JsonSlurper()
+def result 		= slurpler.parseText(response.getResponseBodyContent())
 
+// verify user id
+assert result.id != null
+assert result.id instanceof Number
+assert result.id == GlobalVariable.idUser
 
-// verify user name
-assert result.name != null
-assert result.name instanceof String
-assert result.name == GlobalVariable.userName
-
-// verify job
-assert result.job == GlobalVariable.job
-
-// save user id
+// save user id into global variable
 GlobalVariable.idUser = result.id

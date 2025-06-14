@@ -58,7 +58,7 @@
       <name>apiKey</name>
    </variables>
    <variables>
-      <defaultValue>7</defaultValue>
+      <defaultValue>GlobalVariable.idUser</defaultValue>
       <description></description>
       <id>563e7673-b6ce-4521-a060-f7f1eb063475</id>
       <masked>false</masked>

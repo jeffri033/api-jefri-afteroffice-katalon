@@ -6,12 +6,12 @@
    <UUID>04f95426-b726-41de-b883-305770e9a7ff</UUID>
    <createdEdition>FREE</createdEdition>
    <createdVersion>10.2.0</createdVersion>
-   <freeLicense>false</freeLicense>
+   <freeLicense>true</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>FREE</modifiedEdition>
    <modifiedVersion>10.2.0</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>C:\Users\JTA-JEFRI\Katalon Studio\api-test\api-test.prj</projectFileLocation>
+   <projectFileLocation>C:\Users\JTA-JEFRI\Katalon Studio\katalon-final-project-api\api-test.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

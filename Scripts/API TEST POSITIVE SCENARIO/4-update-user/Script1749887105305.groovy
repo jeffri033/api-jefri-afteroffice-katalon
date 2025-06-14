@@ -32,5 +32,10 @@ def result = slurpler.parseText(response.getResponseBodyContent())
 assert result.name != null
 assert result.name instanceof String
 assert result.name == 'Jeffry'
-assert result.job== 'QA'
+
+
+// verify user name
+assert result.job != null
+assert result.job instanceof String
+assert result.job== 'QA Engineer'
 

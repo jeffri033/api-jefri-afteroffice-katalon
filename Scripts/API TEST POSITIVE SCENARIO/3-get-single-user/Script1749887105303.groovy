@@ -24,25 +24,34 @@ def response = WS.sendRequest(findTestObject('API Method/3-get-single-user', [('
 WS.verifyResponseStatusCode(response, 200)
 
 // get response data
-def slurpler = new groovy.json.JsonSlurper()
-def result = slurpler.parseText(response.getResponseBodyContent())
+def slurpler 	= new groovy.json.JsonSlurper()
+def result 		= slurpler.parseText(response.getResponseBodyContent())
+def id 			= result.data.id
+def firstName 	= result.data.first_name
+def lastName 	= result.data.last_name
+def email 		= result.data.email
 
-def firstName = result.data.first_name
-def lastName = result.data.last_name
 
-
-
-// Print response body
-println("Response Body:\n" + result)
+// verify ID
+assert id != null
+assert id instanceof Number
+assert id == GlobalVariable.idUser
 
 
 // verify first name
-/*assert firstName != null
+assert firstName != null
 assert firstName instanceof String
-assert firstName == 'Michael'
+assert firstName == GlobalVariable.firstName
+
 
 // verify last name
 assert lastName != null
 assert lastName instanceof String
-assert lastName == 'Lawson'*/
+assert lastName == GlobalVariable.lastName
+
+
+// verify email
+assert email != null
+assert email instanceof String
+assert email == GlobalVariable.email
 

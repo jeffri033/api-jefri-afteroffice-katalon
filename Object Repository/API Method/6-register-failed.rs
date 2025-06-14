@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>6-unsuccesful-register</name>
+   <name>6-register-failed</name>
    <tag></tag>
    <elementGuidId>73102555-8b1d-40ab-9939-e9934ee635c2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -12,7 +12,7 @@
    <followRedirects>true</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;email\&quot;: \&quot;sydney@fife\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;email\&quot;: \&quot;michael.lawson@reqres.in\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;text/plain&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -22,7 +22,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
       <webElementGuid>101a9750-0072-432c-8f88-b291cba8a5ea</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
@@ -30,7 +30,7 @@
       <matchCondition>equals</matchCondition>
       <name>x-api-key</name>
       <type>Main</type>
-      <value>reqres-free-v1</value>
+      <value>${apiKey}</value>
       <webElementGuid>682a2574-120d-4007-a8c1-b6b614189e7a</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>10.2.0</katalonVersion>
@@ -38,7 +38,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://reqres.in/api/register</restUrl>
+   <restUrl>${baseUrl}/register</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -47,6 +47,20 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.baseURL</defaultValue>
+      <description></description>
+      <id>4661ca97-b4c9-49c9-b811-9ff273a9c5ed</id>
+      <masked>false</masked>
+      <name>baseUrl</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.apiKey</defaultValue>
+      <description></description>
+      <id>29f7583a-997e-49ab-8ff8-949cbe57660c</id>
+      <masked>false</masked>
+      <name>apiKey</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
